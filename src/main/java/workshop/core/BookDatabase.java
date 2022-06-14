@@ -33,10 +33,10 @@ public class BookDatabase {
             //? Storing the data in an arraylist to an array
             String[] array = database.toArray(new String[0]);
     
-            // //? Printing each line of file which is stored in an array
-            // for (String str: array) {
-            //     System.out.println(str);
-            // }
+            // // //? Printing each line of file which is stored in an array
+            // // for (String str: array) {
+            // //     System.out.println(str);
+            // // }
         } catch (IOException e) {
             e.getStackTrace();
         }
@@ -45,6 +45,7 @@ public class BookDatabase {
 
     //? Search the list of books
     public void search(String bookTitle){
+        final String title = bookTitle;
         database.forEach(books -> {
             if (books.contains(bookTitle)) {
                 System.out.println(books);
